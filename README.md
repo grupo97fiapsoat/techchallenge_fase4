@@ -1,8 +1,8 @@
-# 🍔 FastFood API - Tech Challenge Fase 3
+# 🍔 FastFood API - Tech Challenge Fase 4
 
-Sistema de gerenciamento de pedidos para lanchonete com arquitetura Clean Architecture/Hexagonal Architecture, desenvolvido em .NET 8.
+Sistema de gerenciamento de pedidos em arquitetura de **Microserviços**, desenvolvido em .NET 8.
 
-Este projeto faz parte de um desafio de pós-graduação e contém a infraestrutura necessária para subir uma aplicação .NET API com SQL Server em um cluster Kubernetes local (via Minikube), utilizando Terraform.
+Este projeto faz parte de um desafio de pós-graduação e foi refatorado para uma arquitetura de microserviços, seguindo os princípios de Clean Architecture e DDD (Domain-Driven Design).
 
 📁 Os arquivos de configuração do Kubernetes (hpa, service, secrets, deployment, main, etc.) estão localizados na pasta infra, sendo responsáveis por orquestrar os recursos necessários para o funcionamento da aplicação.
 
@@ -15,6 +15,22 @@ Este projeto faz parte de um desafio de pós-graduação e contém a infraestrut
       - [FastFood-Lambda](https://github.com/grupo97fiapsoat/fastfood-lambda)
       - [FastFood-Banco-RDS](https://github.com/grupo97fiapsoat/infra-rds)
       - [FastFood-Infra-k8s](https://github.com/grupo97fiapsoat/infra-k8s)
+
+### 🚀 Repositórios de Microserviços - Fase 4
+
+Cada microserviço possui seu próprio repositório, pipeline CI/CD e análise de qualidade:
+
+| Microserviço | Repositório | SonarQube Dashboard | Cobertura |
+|--------------|------------|---------------------|-----------|
+| **Order Service** | [fastfood-order-service](https://github.com/grupo97fiapsoat/fastfood-order-service) | [Ver Dashboard](https://sonarcloud.io/project/overview?id=grupo97fiapsoat_fastfood-order-service) | **80.3%** |
+| **Payment Service** | [fastfood-payment-service](https://github.com/grupo97fiapsoat/fastfood-payment-service) | [Ver Dashboard](https://sonarcloud.io/project/overview?id=grupo97fiapsoat_fastfood-payment-service) | **81.46%** |
+| **Production Service** | [fastfood-production-service](https://github.com/grupo97fiapsoat/fastfood-production-service) | [Ver Dashboard](https://sonarcloud.io/project/overview?id=grupo97fiapsoat_fastfood-production-service) | **83.75%** |
+
+**📊 Observações:**
+- ✅ Todos os serviços atingem >80% de cobertura de testes
+- ✅ CI/CD configurado com GitHub Actions
+- ✅ Análise de qualidade contínua no SonarQube Cloud
+- ✅ Relatórios HTML de cobertura disponíveis como artifacts nas Actions
 
 A documentação inclui:
 - Event Storming dos fluxos de negócio
