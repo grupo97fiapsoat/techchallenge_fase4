@@ -108,20 +108,20 @@ Este diagrama representa o fluxo completo do cliente na arquitetura de microserv
 
 <img width="100%" alt="Fluxo do Sistema - Fase 4" src="[URL_DA_SUA_IMAGEM_AQUI]" />
 
-### Fluxo de ADM - Fase 3
-*Diagrama antigo - Arquitetura monolítica:*
+### Fluxo Administrativo (ADM) - Fase 4
+Este diagrama representa os fluxos administrativos na arquitetura de microserviços, incluindo consulta de clientes, cadastro de produtos e gerenciamento de pedidos em produção:
 
-<img width="622" height="976" alt="image" src="https://github.com/user-attachments/assets/89b4514e-5aa4-4341-af27-c89533f000cb" />
+<img width="100%" alt="Fluxo Administrativo - Fase 4" src="[URL_DA_SUA_IMAGEM_AQUI]" />
 
-### Diagrama da Infraestrutura - Fase 3
-*Diagrama antigo - Arquitetura monolítica:*
+### Diagrama da Infraestrutura - Fase 4
+Este diagrama representa a infraestrutura completa dos microserviços em Kubernetes (Minikube), gerenciada via Terraform:
 
-<img width="699" height="589" alt="image" src="https://github.com/user-attachments/assets/b813b312-6b99-4b70-86fd-aeaa3d9ce48f" />
+<img width="100%" alt="Diagrama da Infraestrutura - Fase 4" src="[URL_DA_SUA_IMAGEM_AQUI]" />
 
-### Diagrama Banco de Dados - Fase 3
-*Diagrama antigo - Banco único:*
+### Diagrama de Bancos de Dados - Fase 4
+Este diagrama representa a estrutura dos bancos de dados de cada microserviço (SQL Server para Order/Payment e MongoDB para Production):
 
-<img width="1370" height="751" src="https://github.com/user-attachments/assets/fd6a4d97-0f15-40e6-b2b0-dd094d670a3b" />
+<img width="100%" alt="Diagrama de Bancos de Dados - Fase 4" src="[URL_DA_SUA_IMAGEM_AQUI]" />
 
 
 ### 🗃️ Justificativa da Escolha dos Bancos de Dados - Fase 4
