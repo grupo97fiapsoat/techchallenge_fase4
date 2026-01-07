@@ -103,15 +103,10 @@ Sistema completo de gestão de pedidos para lanchonetes que permite:
 
 ## 📊 Diagramas da Arquitetura - Fase 4
 
-> **⚠️ Nota**: Os diagramas abaixo são da **Fase 3** (arquitetura monolítica). Para a **Fase 4** (arquitetura de microserviços), consulte:
-> **📋 [Diagramas Atualizados - Fase 4](docs/DIAGRAMAS_FASE4.md)**
-> 
-> O documento contém descrições textuais detalhadas dos fluxos e arquitetura atualizados para microserviços.
+### Fluxo do Sistema (Cliente) - Fase 4
+Este diagrama representa o fluxo completo do cliente na arquitetura de microserviços, desde a identificação até o pagamento e acompanhamento do pedido:
 
-### Fluxo do Sistema (Cliente) - Fase 3
-*Diagrama antigo - Arquitetura monolítica:*
-
-<img width="626" height="1067" alt="image" src="https://github.com/user-attachments/assets/e80575ca-a52e-4353-8804-120081c852df" />
+<img width="100%" alt="Fluxo do Sistema - Fase 4" src="[URL_DA_SUA_IMAGEM_AQUI]" />
 
 ### Fluxo de ADM - Fase 3
 *Diagrama antigo - Arquitetura monolítica:*
