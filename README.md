@@ -1,28 +1,49 @@
-# 🍔 FastFood API - Tech Challenge Fase 3
+# 🍔 FastFood API - Tech Challenge Fase 4
 
-Sistema de gerenciamento de pedidos para lanchonete com arquitetura Clean Architecture/Hexagonal Architecture, desenvolvido em .NET 8.
+Sistema de gerenciamento de pedidos em arquitetura de **Microserviços**, desenvolvido em .NET 8.
 
-Este projeto faz parte de um desafio de pós-graduação e contém a infraestrutura necessária para subir uma aplicação .NET API com SQL Server em um cluster Kubernetes local (via Minikube), utilizando Terraform.
+Este projeto faz parte de um desafio de pós-graduação e foi refatorado para uma arquitetura de microserviços, seguindo os princípios de Clean Architecture e DDD (Domain-Driven Design).
 
 📁 Os arquivos de configuração do Kubernetes (hpa, service, secrets, deployment, main, etc.) estão localizados na pasta infra, sendo responsáveis por orquestrar os recursos necessários para o funcionamento da aplicação.
 
 ## 📚 Documentação do Projeto
 
-- **Vídeo da Arquitetura fase 3**: [Assistir no YouTube](https://youtu.be/DBmvyEkDIuo?si=M_rZDcciEpsHAhjT)
+- **Vídeo da Arquitetura Fase 3**: [Assistir no YouTube](https://youtu.be/DBmvyEkDIuo?si=M_rZDcciEpsHAhjT)
 - **Miro Board DDD Primeira Fase**: [Miro](https://miro.com/app/board/uXjVIFgMg1M=/)
-- **Justificativa Escolha do banco e Diagrama Terceira Fase**: [Ir para](#diagrama-banco-de-dados)
-- **Acessar Outros Diretórios do Projeto #Fase 3#**:
-      - [FastFood-Lambda](https://github.com/grupo97fiapsoat/fastfood-lambda)
-      - [FastFood-Banco-RDS](https://github.com/grupo97fiapsoat/infra-rds)
-      - [FastFood-Infra-k8s](https://github.com/grupo97fiapsoat/infra-k8s)
+- **Justificativa Escolha do banco e Diagrama Fase 3**: [Ir para](#diagrama-banco-de-dados)
+
+### 🔗 Acessar Outros Projetos
+
+#### 📦 Repositórios de Microserviços - **Fase 4** (Atuais)
+
+Cada microserviço possui seu próprio repositório, pipeline CI/CD e análise de qualidade:
+
+| Microserviço | Repositório | SonarQube Dashboard | Cobertura | CI/CD |
+|--------------|------------|---------------------|-----------|-------|
+| **Order Service** | [fastfood-order-service](https://github.com/grupo97fiapsoat/fastfood-order-service) | [Ver Dashboard](https://sonarcloud.io/project/overview?id=grupo97fiapsoat_fastfood-order-service) | **80.3%** | [Actions](https://github.com/grupo97fiapsoat/fastfood-order-service/actions) |
+| **Payment Service** | [fastfood-payment-service](https://github.com/grupo97fiapsoat/fastfood-payment-service) | [Ver Dashboard](https://sonarcloud.io/project/overview?id=grupo97fiapsoat_fastfood-payment-service) | **81.46%** | [Actions](https://github.com/grupo97fiapsoat/fastfood-payment-service/actions) |
+| **Production Service** | [fastfood-production-service](https://github.com/grupo97fiapsoat/fastfood-production-service) | [Ver Dashboard](https://sonarcloud.io/project/overview?id=grupo97fiapsoat_fastfood-production-service) | **83.75%** | [Actions](https://github.com/grupo97fiapsoat/fastfood-production-service/actions) |
+
+**📊 Observações:**
+- ✅ Todos os serviços atingem >80% de cobertura de testes
+- ✅ CI/CD configurado com GitHub Actions
+- ✅ Análise de qualidade contínua no SonarQube Cloud
+- ✅ Relatórios HTML de cobertura disponíveis como artifacts nas Actions
+- ✅ Branch protection configurado (PR obrigatório para merge)
+
+#### 📁 Projetos de Fases Anteriores
+
+- [FastFood-Lambda](https://github.com/grupo97fiapsoat/fastfood-lambda) - Projeto Fase 3
+- [FastFood-Banco-RDS](https://github.com/grupo97fiapsoat/infra-rds) - Projeto Fase 3
+- [FastFood-Infra-k8s](https://github.com/grupo97fiapsoat/infra-k8s) - Projeto Fase 3
 
 A documentação inclui:
 - Event Storming dos fluxos de negócio
 - Diagramas de Domínio (DDD)
 - Arquitetura da Solução
 - Detalhes da Implementação
-- Justificativa escolha do Banco de dados *FASE 3*
-- Diagrama de Branco
+- Justificativa escolha dos Bancos de dados *FASE 4* (SQL Server + MongoDB)
+- Diagrama de Banco
 
 
 ## 📋 Índice
@@ -101,13 +122,24 @@ Este diagrama representa o banco de Dados:
 <img width="1370" height="751" src="https://github.com/user-attachments/assets/fd6a4d97-0f15-40e6-b2b0-dd094d670a3b" />
 
 
-### 🗃️ Justificativa da Escolha do SQL Server
+### 🗃️ Justificativa da Escolha dos Bancos de Dados - Fase 4
 
-Optamos pelo SQL Server como banco de dados relacional do sistema por sua integração nativa com o .NET, o que simplifica o desenvolvimento e aumenta a produtividade com o Entity Framework Core e drivers oficiais da Microsoft.
-Além de atender bem às necessidades atuais do sistema — como cadastros de clientes, produtos e pedidos —, o SQL Server garante consistência transacional e uma estrutura sólida para evolução futura.
-Pensando em escalabilidade, ele suporta recursos essenciais para módulos futuros, como controle de estoque, registros financeiros e relatórios analíticos.
-Na nuvem, pode ser utilizado via Amazon RDS for SQL Server ou Azure SQL Database, oferecendo backup automatizado, alta disponibilidade, escalabilidade e criptografia.
-Por fim, o SQL Server se destaca pela segurança e conformidade, com suporte a TDE, Always Encrypted e mascaramento dinâmico de dados, essenciais para proteger informações sensíveis como CPF.
+Na **Fase 4**, o projeto foi refatorado para microserviços, utilizando diferentes bancos de dados conforme a necessidade de cada serviço:
+
+**SQL Server** (Order Service e Payment Service):
+- Integração nativa com .NET, simplificando o desenvolvimento com Entity Framework Core
+- Consistência transacional para operações críticas de pedidos e pagamentos
+- Suporte a ACID completo, essencial para garantir integridade de dados financeiros
+- Escalabilidade e recursos avançados para módulos futuros
+- Na nuvem, pode ser utilizado via Amazon RDS for SQL Server ou Azure SQL Database, oferecendo backup automatizado, alta disponibilidade, escalabilidade e criptografia
+- Segurança e conformidade, com suporte a TDE, Always Encrypted e mascaramento dinâmico de dados, essenciais para proteger informações sensíveis como CPF
+
+**MongoDB** (Production Service):
+- Modelo NoSQL flexível, ideal para documentos de produção que podem evoluir
+- Alta performance para leitura/escrita de pedidos em produção
+- Facilidade de escalabilidade horizontal conforme o volume aumenta
+- Suporte a estruturas de dados complexas e hierárquicas
+- Na nuvem, MongoDB Atlas oferece backup automatizado, alta disponibilidade e escalabilidade global
 
 ## 🛠 Tecnologias
 
@@ -179,7 +211,7 @@ Antes de começar, tenha os seguintes softwares instalados na sua máquina:
 - **SQL Server** (pode ser via Docker)
 - **Visual Studio 2022** ou **VS Code**
 
-## 🚀 Execução e Demonstração – Fase 3 (Cloud)
+## 🚀 Execução e Demonstração – Fase 4 (Microserviços)
 
 ### 📁 Etapa 1 – Clonar o projeto
 
@@ -328,7 +360,7 @@ Após a execução bem-sucedida:
 
 ### 🔒 Autenticação e Autorização
 
-### Fase 3 - Autenticação Externa + Function CPF
+### Autenticação Externa + Function CPF
 
 **JWT Authentication com IdP Externo:**
 - **Produção**: Aceita JWT de IdP externo (Cognito/Google/Azure AD)
@@ -617,4 +649,4 @@ Este projeto está sob licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais
 
 ---
 
-**Desenvolvido para o Tech Challenge - Fase 3** 🚀
+**Desenvolvido para o Tech Challenge - Fase 4** 🚀
