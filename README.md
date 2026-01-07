@@ -104,22 +104,22 @@ Sistema completo de gestão de pedidos para lanchonetes que permite:
 ## Fluxo do Sistema
 Este diagrama representa o fluxo completo do cliente, desde a identificação até o pagamento e acompanhamento do pedido:
 
-<img width="626" height="1067" alt="image" src="https://github.com/user-attachments/assets/e80575ca-a52e-4353-8804-120081c852df" />
+<img width="626" height="1067" alt="image" src="https://github.com/user-attachments/assets/b97a794d-5f79-4d41-9efa-8c29df82eb50" />
 
 ## Fluxo de ADM
 Este diagrama representa o fluxo administrativo, para consulta de clientes e cadstro de novos itens:
 
-<img width="622" height="976" alt="image" src="https://github.com/user-attachments/assets/89b4514e-5aa4-4541-af27-c89533f000cb" />
+<img width="1018" height="507" alt="Fluxo de ADM" src="https://github.com/user-attachments/assets/48cbf2ef-6af2-4abc-8e84-4b1a1527c3a4" />
 
 ## Diagrama da Infraestrutura
 Este diagrama representa a infraestrutura do projeto:
 
-<img width="699" height="589" alt="image" src="https://github.com/user-attachments/assets/b813b312-6b99-4b70-86fd-aeaa3d9ce48f" />
+<img width="699" height="589" alt="image" src="https://github.com/user-attachments/assets/0c8dbffe-43dc-4945-9a63-279e71a2b359" />
 
 ## Diagrama Banco de Dados
 Este diagrama representa o banco de Dados:
 
-<img width="1370" height="751" src="https://github.com/user-attachments/assets/fd6a4d97-0f15-40e6-b2b0-dd094d670a3b" />
+<img width="1008" height="522" alt="Diagrama Banco de Dados" src="https://github.com/user-attachments/assets/37742946-6adb-46fa-8208-f56e36a71e98" />
 
 
 ### 🗃️ Justificativa da Escolha dos Bancos de Dados - Fase 4
