@@ -20,9 +20,11 @@ Cada microserviço possui seu próprio repositório, pipeline CI/CD e análise d
 
 | Microserviço | Repositório | SonarQube Dashboard | Cobertura | CI/CD |
 |--------------|------------|---------------------|-----------|-------|
-| **Order Service** | [fastfood-order-service](https://github.com/grupo97fiapsoat/fastfood-order-service) | [Ver Dashboard](https://sonarcloud.io/project/overview?id=grupo97fiapsoat_fastfood-order-service) | **80.3%** | [Actions](https://github.com/grupo97fiapsoat/fastfood-order-service/actions) |
-| **Payment Service** | [fastfood-payment-service](https://github.com/grupo97fiapsoat/fastfood-payment-service) | [Ver Dashboard](https://sonarcloud.io/project/overview?id=grupo97fiapsoat_fastfood-payment-service) | **81.46%** | [Actions](https://github.com/grupo97fiapsoat/fastfood-payment-service/actions) |
-| **Production Service** | [fastfood-production-service](https://github.com/grupo97fiapsoat/fastfood-production-service) | [Ver Dashboard](https://sonarcloud.io/project/overview?id=grupo97fiapsoat_fastfood-production-service) | **83.75%** | [Actions](https://github.com/grupo97fiapsoat/fastfood-production-service/actions) |
+| **Order Service** | [fastfood-order-service](https://github.com/grupo97fiapsoat/fastfood-order-service) | [Ver Dashboard](https://sonarcloud.io/project/overview?id=grupo97fiapsoat_fastfood-order-service) | **96.8%** | [Actions](https://github.com/grupo97fiapsoat/fastfood-order-service/actions) |
+| **Payment Service** | [fastfood-payment-service](https://github.com/grupo97fiapsoat/fastfood-payment-service) | [Ver Dashboard](https://sonarcloud.io/project/overview?id=grupo97fiapsoat_fastfood-payment-service) | **95.2%** | [Actions](https://github.com/grupo97fiapsoat/fastfood-payment-service/actions) |
+| **Production Service** | [fastfood-production-service](https://github.com/grupo97fiapsoat/fastfood-production-service) | [Ver Dashboard](https://sonarcloud.io/project/overview?id=grupo97fiapsoat_fastfood-production-service) | **97.4%** | [Actions](https://github.com/grupo97fiapsoat/fastfood-production-service/actions) |
+
+<img width="1134" height="619" alt="image" src="https://github.com/user-attachments/assets/e8252219-8188-42e2-87ba-ed264e313bdb" />
 
 **📊 Observações:**
 - ✅ Todos os serviços atingem >80% de cobertura de testes
